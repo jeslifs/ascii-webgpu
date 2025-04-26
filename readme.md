@@ -1,4 +1,6 @@
-# Three.js Journey
+# ASCII WebGPU Animation
+
+## Three.js
 
 ## Setup
 Download [Node.js](https://nodejs.org/en/download/).
