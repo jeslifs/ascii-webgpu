@@ -1,5 +1,5 @@
 import * as THREE from 'three/webgpu'
-import { mx_noise_float, uv, texture, attribute, uniform, color, mix, floor, cross, dot, float, transformNormalToView, positionLocal, sign, step, Fn, varying, vec2, vec3, Loop, vec4, pow } from 'three/tsl';
+import { uv, texture, attribute, uniform, color, mix, floor, step, Fn, vec2, pow } from 'three/tsl';
 // import { TextureLoader } from 'three';
 
 
