@@ -81,23 +81,23 @@ let cubes = []
 const setAnotherScene = () => {
     const directionalLight = new THREE.DirectionalLight('#ffffff', 1.5)
     directionalLight.position.set(1, 1, 0.866)
-    const ambientLigth = new THREE.AmbientLight('#ffffff', 0.5)
+    const ambientLigth = new THREE.AmbientLight('#ffffff', 1)
 
     scene2 = new THREE.Scene()
     camera2 = new THREE.PerspectiveCamera(35, sizes.width / sizes.height, 0.1, 100)
     camera2.position.set(0, 0, 3 * 2)
     renderTarget = new THREE.RenderTarget(sizes.width, sizes.height)
 
-    let cubeCount = 2
+    let cubeCount = 10
     for(let i = 0; i < cubeCount; i++)
     {
-        let size = Math.random() + .2
+        let size = Math.random()
         let mesh = new THREE.Mesh(
             new THREE.BoxGeometry(size, size, size),
             new THREE.MeshPhysicalMaterial()
         )
-        mesh.position.set(Math.random(-1, 3), Math.random(-1, 3), Math.random(-1, 3))
-        mesh.rotation.set(Math.random(0, Math.PI), Math.random(0, Math.PI), Math.random(0, Math.PI))
+        mesh.position.set(Math.random() * 4 - 1, Math.random() * 4 - 1,  Math.random() * 4 - 1)
+        mesh.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI)
         scene2.add(mesh)
         cubes.push(mesh)
     }
@@ -232,8 +232,8 @@ const tick = () =>
     cubes.forEach((cube, index) => {
         cube.rotation.x = Math.sin(elapsedTime * 0.2 * cube.position.x)
         cube.rotation.y = Math.sin(elapsedTime * 0.2 * cube.position.y)
-        // cube.rotation.z = Math.sin(elapsedTime * cube.position.z)
-        cube.position.y = Math.sin(elapsedTime * index)
+        cube.rotation.z = Math.sin(elapsedTime * 0.2 * cube.position.z)
+        cube.position.y = Math.sin(elapsedTime * 0.2 * index)
 
     })
 
