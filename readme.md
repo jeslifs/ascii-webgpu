@@ -1,6 +1,6 @@
 # ASCII WebGPU Animation
 
-![screenshort-for-post](![image](https://github.com/user-attachments/assets/8fac265d-aa63-4263-9c92-7cba4a81d5f7)
+(![image](https://github.com/user-attachments/assets/8fac265d-aa63-4263-9c92-7cba4a81d5f7)
 
 
 🔥 **Live: [ascii-webgpu.vercel.app](https://ascii-webgpu.vercel.app/)**
